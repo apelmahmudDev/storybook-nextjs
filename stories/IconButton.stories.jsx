@@ -1,5 +1,6 @@
 import React from 'react';
 import IconButton from './IconButton';
+import './button.css';
 
 export default {
 	title: 'Practice/IconButton',

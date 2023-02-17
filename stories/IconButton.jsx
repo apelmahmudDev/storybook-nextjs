@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 
 const IconButton = ({ icon, label, backgroundColor, ...props }) => {
 	return (
-		<button>
+		<button
+			type='button'
+			className='storybook-button--primary'
+			// style={backgroundColor && { backgroundColor }}
+			{...props}
+		>
 			<span>{icon}</span>
 			<span>{label}</span>
 		</button>
