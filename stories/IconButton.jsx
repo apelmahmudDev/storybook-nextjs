@@ -1,28 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './IconButton.css';
 
-const IconButton = ({ icon, label, backgroundColor, ...props }) => {
+const IconButton = ({ icon, bgColor, rounded, size, ...props }) => {
+	const mode = rounded ? 'rounded' : 'no-rounded';
 	return (
 		<button
-			type='button'
-			className='storybook-button--primary'
-			// style={backgroundColor && { backgroundColor }}
-			{...props}
+			className={['icon-button', `icon-button--${size}`, mode].join(' ')}
+			style={bgColor && { backgroundColor: bgColor }}
 		>
-			<span>{icon}</span>
-			<span>{label}</span>
+			{icon}
 		</button>
 	);
 };
 
 IconButton.propTypes = {
 	icon: PropTypes.string.isRequired,
-	label: PropTypes.string.isRequired,
-	backgroundColor: PropTypes.string,
+	rounded: PropTypes.bool,
+	size: PropTypes.oneOf(['small', 'medium', 'large']),
+	bgColor: PropTypes.string,
 };
 
 IconButton.defaultProps = {
-	backgroundColor: null,
+	icon: '🌺',
+	rounded: true,
+	size: 'medium',
 };
 
 export default IconButton;

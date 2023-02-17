@@ -1,0 +1,46 @@
+.simple-button {
+	border: none;
+	cursor: pointer;
+}
+
+.simple-button--small {
+	font-size: 12px;
+	padding: 10px 16px;
+}
+
+.simple-button--medium {
+	font-size: 14px;
+	padding: 11px 20px;
+}
+
+.simple-button--large {
+	font-size: 16px;
+	padding: 12px 24px;
+}
+
+.simple-button-rounded--normal {
+	border-radius: 0;
+}
+
+.simple-button-rounded--sm {
+	border-radius: 5px;
+}
+
+.simple-button-rounded--full {
+	border-radius: 30px;
+}
+
+.simple-button--primary {
+	background-color: #1ea7fd;
+	color: #fff;
+}
+
+.simple-button--secondary {
+	background-color: #ff6b6b;
+	color: #fff;
+}
+
+.simple-button--danger {
+	background-color: #ff0000;
+	color: #fff;
+}
